@@ -19,21 +19,4 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  build: {
-    rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, 'index.html'),
-      },
-    },
-  },
-  css: {
-    postcss: {
-      plugins: [
-        require('tailwindcss')({
-          config: path.resolve(__dirname, 'tailwind.config.mjs')
-        }),
-        require('autoprefixer')
-      ]
-    }
-  }
 }));
