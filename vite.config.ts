@@ -26,7 +26,14 @@ export default defineConfig(({ mode }) => ({
       },
     },
   },
-  optimizeDeps: {
-    include: ['tailwind.config.mjs'],
-  },
+  css: {
+    postcss: {
+      plugins: [
+        require('tailwindcss')({
+          config: path.resolve(__dirname, 'tailwind.config.mjs')
+        }),
+        require('autoprefixer')
+      ]
+    }
+  }
 }));
