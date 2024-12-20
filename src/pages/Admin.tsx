@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AdminPanel from "@/components/AdminPanel";
 import BlogManagement from "@/components/admin/BlogManagement";
+import Analytics from "@/components/admin/Analytics";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { supabase } from "@/integrations/supabase/client";
 import AuthComponent from "@/components/Auth";
@@ -61,11 +62,16 @@ const Admin = () => {
           </button>
         </div>
         
-        <Tabs defaultValue="locations" className="space-y-6">
+        <Tabs defaultValue="analytics" className="space-y-6">
           <TabsList className="bg-white">
+            <TabsTrigger value="analytics">Analytics</TabsTrigger>
             <TabsTrigger value="locations">Locations</TabsTrigger>
             <TabsTrigger value="blogs">Blogs</TabsTrigger>
           </TabsList>
+          
+          <TabsContent value="analytics">
+            <Analytics />
+          </TabsContent>
           
           <TabsContent value="locations">
             <AdminPanel />
