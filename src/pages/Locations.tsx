@@ -45,7 +45,6 @@ const Locations = () => {
         <div className="max-w-2xl mx-auto">
           <Command className="rounded-full border shadow-sm">
             <div className="flex items-center px-4">
-              <Search className="w-4 h-4 text-gray-400 mr-2" />
               <CommandInput
                 placeholder="Search by city, location name, or address..."
                 value={searchQuery}

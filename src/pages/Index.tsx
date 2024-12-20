@@ -10,7 +10,8 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center text-center px-4 gradient-bg">
+      <section className="relative h-[600px] flex items-center justify-center text-center px-4">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#F9D1D1] via-[#FFA4B6] via-[#F765A3] via-[#A155B9] via-[#165BAA] to-[#0B1354] animate-gradient bg-[length:200%_100%]" />
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-3xl mx-auto text-white">
           <h1 className="text-5xl font-display font-bold mb-4">LA's Premium Laundromat Chain</h1>
@@ -72,7 +73,7 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <ServiceCard
-              icon={<img src="/lovable-uploads/bc57fc49-5eb1-41cb-9672-70f34a3dc330.png" alt="Wash & Fold" className="w-12 h-12" />}
+              icon={<img src="/lovable-uploads/wash-fold-pink.svg" alt="Wash & Fold" className="w-12 h-12" />}
               title="Wash & Fold"
               description="Professional washing, drying, and folding service"
               price="From $2.50/lb"

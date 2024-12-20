@@ -17,13 +17,6 @@ const MobileMenu = () => {
         </button>
       </SheetTrigger>
       <SheetContent side="right" className="w-[80vw] sm:w-[350px] pt-12">
-        <button
-          onClick={() => setIsOpen(false)}
-          className="absolute right-4 top-4 p-2 hover:bg-gray-100 rounded-lg transition-colors"
-          aria-label="Close menu"
-        >
-          <X className="h-6 w-6" />
-        </button>
         <nav className="flex flex-col space-y-4">
           <MobileLink to="/" onClick={() => setIsOpen(false)}>Home</MobileLink>
           <MobileLink to="/locations" onClick={() => setIsOpen(false)}>Locations</MobileLink>
